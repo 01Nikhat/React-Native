@@ -1,117 +1,62 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {View, Text, StyleSheet} from 'react-native';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+import Exstyles from './style';//using exteranl styles
+/**
+* 1) inline, internal and external styles in react-native
+*/
+const App = () => {
+  
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View>
+      <Text style={{fontSize: 25, color: 'yellow', backgroundColor: 'green', marginBottom: 5}} >Inline Style in React-Native</Text>
+
+      <Text style={styles.textBox1} >Internal Style1 in React-Native</Text>
+      <Text style={[styles.textCenter, styles.textBox2]} >Internal Style2 in React-Native</Text> 
+      {/* can use multiple style class in [] */}
+
+      <Text style={Exstyles.textBox1} >External Style1 in React-Native</Text>
+      <Text style={[styles.textCenter, Exstyles.textBox2]} >Exteranl Style2 in React-Native</Text>
+
+      {/* below using internal, external and inline styles */}
+      <Text style={[styles.textCenter, Exstyles.textBox2, {marginTop: 20}]} >Exteranl Style2 in 
+        React-Native</Text>
+
     </View>
   );
-}
+};
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const styles = StyleSheet.create({ //create ek object leta ha
+  textBox1:{
+    color: 'blue',
+    fontSize: 25,
+    backgroundColor: 'orange',
+    marginBottom: 5,
+    padding: 15,
+    borderRadius: 10,
+    height: 140,
+    textAlignVertical: 'center', //vertically center karega
+    textAlign: 'center', //horizontally center karega
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    borderWidth: 3,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  textBox2:{
+    color: 'blue',
+    fontSize: 25,
+    backgroundColor: 'pink',
+    marginBottom: 5,
+    padding: 25,
+    borderRadius: 30,
+    height: 200,
+    
+    borderWidth: 8,
+    borderColor: 'red',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  textCenter:{
+    textAlignVertical: 'center', //vertically center karega
+    textAlign: 'center', //horizontally center karega
   },
 });
 
