@@ -1,46 +1,29 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+/* eslint-disable */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-function App(): React.JSX.Element {
-  
-  const user = [
-    {id:1,
-     name: "nikhat"
-    },
-    {id:2,
-      name: "naheed"
-     },
-     {id:3,
-      name: "naaz"
-     },
-     {id:4,
-      name: "naureen"
-     }
-  ]
+import {Text, View, StyleSheet, ScrollView} from 'react-native';
+
+import FlatListComponent from './components/FlatListComponent';
+import MapList from './components/MapList';
+
+/**
+ * 1) making flatList (component: FlatListComponent)
+ * 2) making list using map function
+ */
+
+const App = () => {
 
   return (
-    <View>
-      <Text style={{fontSize:31}}>List With Flat List</Text>
+    <View style={{flex: 1}}> 
+    {/*Parent View with flex: 1; If the parent View or the FlatListComponent is taking up the entire screen, it can cause the ScrollView to not have enough space to scroll. */}
+
+      <FlatListComponent/>
+      <MapList/>
+      
     </View>
- 
   );
-}
+};
 
 
 export default App;
