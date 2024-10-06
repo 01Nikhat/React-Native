@@ -7,7 +7,8 @@
 
 import React, { Component } from 'react';
 import { Button, Text,TextInput,View,} from 'react-native';
-import ClassComponents from './components/ClassComponents';
+import ClassComponent from './components/ClassComponents';
+import StateProps from './components/StateProps';
 
 class App extends Component {
   //We can't use const,let,var in class 
@@ -21,7 +22,8 @@ class App extends Component {
         <Text style= {{fontSize:30, color:'red'}}> Components use</Text>
         <TextInput placeholder='Enter Your Name'/>
         <Button title='Press Me' onPress={this.fruit}></Button>
-        <ClassComponents />
+        <ClassComponent />
+        <StateProps />
       </View>
      
     );
