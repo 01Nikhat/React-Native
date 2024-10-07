@@ -1,33 +1,36 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+
+import {View} from 'react-native';
+
+import UseEffectComponent1 from './components/UseEffectComponent1';
+import UseEffectComponent2 from './components/UseEffectComponent2';
+import ToggleComponent from './components/ToggleComponent';
+import useEffectUnmount3 from './components/useEffectUnmount3';
+
+/**
+ * 1) Life Cycle with useEffect (component: UseEffectComponent1)
+ * 2) useEffect hook as ComponentDidUpdate life cycle method (component: UseEffectComponent1)
+ * 3) Show/Hide Component (component: ToggleComponent)
+ * 4) useEffect for Unmount Life Cycle (component: UseEffectComponent3)
+*/
 
 
-function App(): React.JSX.Element {
+const App = () => {
 
-  
-  return (
-   <View>
-    <Text style={{fontSize:30}}>Life Cycle with Use Effect</Text>
-   </View>
+  return(
+    <View>
+
+      <UseEffectComponent1/>
+
+      {/* <UseEffectComponent2/> */}
+
+      {/* <ToggleComponent/> */}
+
+      {/* <useEffectUnmount3 /> */}
+      
+    </View>
   );
-}
-
-
+};
 
 export default App;
