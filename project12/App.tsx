@@ -12,6 +12,7 @@ import Loader from './components/Loader';
 import DynamicRadioButton from './components/DynamicRadioButton';
 import ModalComponent from './components/ModalComponent';
 import PressableComponent from './components/PressableComponent';
+import StatusBarComponent from './components/StatusBarComponent';
 
 
 
@@ -24,7 +25,8 @@ function App(): React.JSX.Element {
       { /* <DynamicRadioButton /> */}
       {/* <Loader /> */}
       {/*<ModalComponent /> */}
-      <PressableComponent />
+      {/* <PressableComponent /> */}
+      <StatusBarComponent />
     </View>
   );
 }
