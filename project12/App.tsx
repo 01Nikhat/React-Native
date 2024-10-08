@@ -6,63 +6,25 @@
  */
 
 import React from 'react';
-import {
-  Button,
-  
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-} from 'react-native';
+import { View,} from 'react-native';
+import Buttons from './components/Buttons';
+import Loader from './components/Loader';
+import DynamicRadioButton from './components/DynamicRadioButton';
 
 
 
 function App(): React.JSX.Element {
 
   return (
-    <View style = {styles.main}>
-      <TouchableHighlight>
-      <Text style = {[styles.button, styles.success]} >Button</Text>
-      </TouchableHighlight>
-
-      <TouchableHighlight>
-      <Text style = {[styles.button, styles.primary]} >Button</Text>
-      </TouchableHighlight>
-
-      <TouchableHighlight>
-      <Text style = {[styles.button, styles.error]} >Button</Text>
-      </TouchableHighlight>
-
-
-      <Button title='button'></Button>
+    <View >
+      {/* <Buttons /> */}
+     {/* <Loader /> */}
+      { /* <DynamicRadioButton /> */}
+      <Loader />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  main:{
-    flex:1
-  },
- button:{
-  backgroundColor:"#bbb",
-  color:"#fff",
-  fontSize:24,
-  textAlign:'center',
-  padding:10,
-  borderRadius:10,
-  shadowColor:'black',
-  elevation:10,
-  shadowOpacity:1
- },
- success:{
-  backgroundColor:'green'
- },
- primary:{
-  backgroundColor:'blue'
- },
- error:{
-  backgroundColor:'red'
- }
-});
+
 
 export default App;
