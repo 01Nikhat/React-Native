@@ -6,11 +6,12 @@
  */
 
 import React from 'react';
-import { View,} from 'react-native';
+import { Pressable, View,} from 'react-native';
 import Buttons from './components/Buttons';
 import Loader from './components/Loader';
 import DynamicRadioButton from './components/DynamicRadioButton';
 import ModalComponent from './components/ModalComponent';
+import PressableComponent from './components/PressableComponent';
 
 
 
@@ -22,7 +23,8 @@ function App(): React.JSX.Element {
      {/* <Loader /> */}
       { /* <DynamicRadioButton /> */}
       {/* <Loader /> */}
-      <ModalComponent />
+      {/*<ModalComponent /> */}
+      <PressableComponent />
     </View>
   );
 }
