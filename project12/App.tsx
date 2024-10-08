@@ -10,6 +10,7 @@ import { View,} from 'react-native';
 import Buttons from './components/Buttons';
 import Loader from './components/Loader';
 import DynamicRadioButton from './components/DynamicRadioButton';
+import ModalComponent from './components/ModalComponent';
 
 
 
@@ -20,7 +21,8 @@ function App(): React.JSX.Element {
       {/* <Buttons /> */}
      {/* <Loader /> */}
       { /* <DynamicRadioButton /> */}
-      <Loader />
+      {/* <Loader /> */}
+      <ModalComponent />
     </View>
   );
 }
