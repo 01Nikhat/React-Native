@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:'rgba(50,50,50,.5)'
   },
-  body{
+  body :{
     backgroundColor:'#fff',
     height:300,
     width:300,
