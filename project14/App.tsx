@@ -12,6 +12,7 @@ import {
   View,
 } from 'react-native';
 import StackNavigation from './components/StackNavigation';
+import StackNavStyle from './components/SatckNavStyle';
 
 
 function App(): React.JSX.Element {
@@ -19,8 +20,8 @@ function App(): React.JSX.Element {
 
   return (
    
-    
-    <StackNavigation />
+    <StackNavStyle />
+    //<StackNavigation />
   
   );
 }
