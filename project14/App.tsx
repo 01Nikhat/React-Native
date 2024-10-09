@@ -14,6 +14,7 @@ import {
 import StackNavigation from './components/StackNavigation';
 import StackNavStyle from './components/SatckNavStyle';
 import PassDataStackNav from './components/PassDataStackNav';
+import PassDataDynamic from './components/PassDataDynamic';
 
 
 function App(): React.JSX.Element {
@@ -22,7 +23,8 @@ function App(): React.JSX.Element {
   return (
    //<StackNavigation />
     //<StackNavStyle />
-    <PassDataStackNav />
+   // <PassDataStackNav />
+   <PassDataDynamic />
     
   
   );
