@@ -13,15 +13,17 @@ import {
 } from 'react-native';
 import StackNavigation from './components/StackNavigation';
 import StackNavStyle from './components/SatckNavStyle';
+import PassDataStackNav from './components/PassDataStackNav';
 
 
 function App(): React.JSX.Element {
 
 
   return (
-   
-    <StackNavStyle />
-    //<StackNavigation />
+   //<StackNavigation />
+    //<StackNavStyle />
+    <PassDataStackNav />
+    
   
   );
 }
