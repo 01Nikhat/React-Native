@@ -7,7 +7,9 @@
 
 import React, { useState } from 'react';
 import {View} from 'react-native';
-import ModalComponent from '../project12/components/ModalComponent';
+import InstallPackage from './components/InstallPackage';
+import PlatFormCheck from './components/PlatFormCheck';
+
 
 
 
@@ -16,7 +18,8 @@ function App(): React.JSX.Element {
 
   return (
    <View >
-    <ModalComponent />
+    {/* <PlatFormCheck /> */}
+   <InstallPackage />
    </View>
 
   );
