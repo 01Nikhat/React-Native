@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import {View} from 'react-native';
 import InstallPackage from './components/InstallPackage';
 import PlatFormCheck from './components/PlatFormCheck';
+import CustomModal from './components/customModal';
 
 
 
@@ -17,11 +18,12 @@ function App(): React.JSX.Element {
  
 
   return (
-   <View >
-    {/* <PlatFormCheck /> */}
-   <InstallPackage />
-   </View>
-
+    <View>
+            
+       {/* <PlatFormCheck /> */}
+        {/* <InstallPackage /> */}
+       <CustomModal />
+     </View>
   );
 }
 
