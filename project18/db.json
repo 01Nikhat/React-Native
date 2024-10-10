@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": "3",
+      "name": "nahid",
+      "age": 27,
+      "email": "nahid@gmail.com"
+    },
+    {
+      "name": "nikki",
+      "age": 24,
+      "email": "ab@test.com"
+    },
+    {
+      "id": "af3f",
+      "name": "nikhat",
+      "age": 23,
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": "3a48",
+      "name": "noorah",
+      "age": 10,
+      "email": "noorah@gmail.com"
+    },
+    {
+      "id": "0fe1",
+      "name": "naaz",
+      "age": 22,
+      "email": "naaz@gmail.com"
+    }
+  ]
+}
