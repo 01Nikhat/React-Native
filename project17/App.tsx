@@ -7,6 +7,8 @@
 
 import React from 'react';
 import ApiIntegrate from './components/ApiIntegrate';
+import PostApi from './components/PostApi';
+import { Text, View } from 'react-native';
 
 
 function App(): React.JSX.Element {
@@ -14,7 +16,9 @@ function App(): React.JSX.Element {
 
   
   return (
-    <ApiIntegrate />
+    //<ApiIntegrate />
+   <PostApi />
+   
     
   );
 }
