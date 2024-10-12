@@ -11,6 +11,7 @@ import PostApi from './components/PostApi';
 import { Text, View } from 'react-native';
 import PostApiInputField from './components/PostApiInputField';
 import FormValidation from './components/FormValidation';
+import ListApi from './components/ListApi';
 
 
 function App(): React.JSX.Element {
@@ -21,7 +22,8 @@ function App(): React.JSX.Element {
     //<ApiIntegrate />
    //<PostApi />
    //<PostApiInputField />
-   <FormValidation />
+   //<FormValidation />
+   <ListApi />
    
     
   );
