@@ -10,9 +10,9 @@ const PostApi = () => {
   
   const saveApidata = async () =>{
     const postData = {
-      name: 'IPMan',
-      age: 35,
-      email: 'ipman@gmail.com',
+      name: 'ashik',
+      age: 30,
+      email: 'ashik@gmail.com',
     }
     const url = 'http://10.0.2.2:3000/users';
     const result = await fetch(url, { //while modifying, this is the second parameter as by default second parameter is not given it is 'GET
