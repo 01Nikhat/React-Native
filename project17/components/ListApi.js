@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native"
+import { Button, Modal, StyleSheet, Text, View } from "react-native"
 
 const ListApi = () =>{
   const [data,setData] = useState([]);
@@ -17,6 +17,17 @@ const ListApi = () =>{
     }
   }
 
+  const deleteUser = async (id) =>{
+    const url = 'http://10.0.2.2:3000/users';
+   let result = await fetch(`${url}/${id}`,{ method:"DELETE",});
+   result = await result.json();
+   if (result) {
+    console.warn("User Deleted");
+    getAPIData();
+   }
+
+  }
+
   useEffect(()=>{
     getAPIData();
   },[]);
@@ -31,18 +42,26 @@ const ListApi = () =>{
 <View style={{flex:2}}><Text >Operation</Text></View>
 
 
-</View>
+</View >
 
-      { data.length ? data.map((item)=><View style={styles.dataWrapper}>
+      { data.length ? data.map((item)=><View key = {item.id} style={styles.dataWrapper}>
 
           <View style={{flex:1}}><Text >{item.name}</Text></View>
           <View style={{flex:1}}><Text >{item.age}</Text></View>
           <View style={{flex:1}}><Button title="Update"></Button></View>
-          <View style={{flex:1}}><Button title="Delete"></Button></View>
+          <View style={{flex:1}}><Button title="Delete" onPress={()=>deleteUser(item.id)}></Button></View>
           
 
       </View>):null}
       <Button onPress={getAPIData} title="Click" />
+
+      <Modal>
+        <View>
+          <View>
+            <Text>Dummy Text</Text>
+          </View>
+        </View>
+      </Modal>
     </View>
   )
 }

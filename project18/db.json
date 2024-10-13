@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "3",
-      "name": "nahid",
-      "age": 27,
-      "email": "nahid@gmail.com"
-    },
-    {
       "name": "nikki",
       "age": 24,
       "email": "ab@test.com",
@@ -41,12 +35,6 @@
       "name": "ashik",
       "age": 30,
       "email": "ashik@gmail.com"
-    },
-    {
-      "id": "2193",
-      "name": "atif",
-      "age": "28",
-      "email": "abc@gmail.com"
     }
   ]
 }
