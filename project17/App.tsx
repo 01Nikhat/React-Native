@@ -12,6 +12,8 @@ import { Text, View } from 'react-native';
 import PostApiInputField from './components/PostApiInputField';
 import FormValidation from './components/FormValidation';
 import ListApi from './components/ListApi';
+import IntegratedAPIWithPUT_Method from './components/integratedAPIWithPUT_Method';
+import SearchApi from './components/SearchApi';
 
 
 function App(): React.JSX.Element {
@@ -23,7 +25,9 @@ function App(): React.JSX.Element {
    //<PostApi />
    //<PostApiInputField />
    //<FormValidation />
-   <ListApi />
+  // <ListApi />
+//<IntegratedAPIWithPUT_Method />
+<SearchApi />
    
     
   );
