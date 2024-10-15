@@ -1,10 +1,10 @@
 import { StyleSheet, View,Text,Image,Button } from "react-native"
 
 import { addToCart } from "./redux/action";
-import { useDispatch, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Product = (props) =>{
-  
+
   const dispatch = useDispatch();
   const handleAddToCart = (item) =>{
     dispatch(addToCart(item))
